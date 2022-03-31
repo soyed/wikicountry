@@ -29,9 +29,22 @@ const countries = (countryCode, callback) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      callback(undefined, { ...data });
+      let res = {};
+      for (let key in data) {
+        // edge case => only return the properties required
+        if (properties.some((prop) => prop === key)) {
+          res[key] = data[key];
+        }
+      }
+
+      callback(undefined, res);
     })
     .catch((err) => {
-      callback({ ...err }, undefined);
+      callback(
+        { message: 'Unable to connect to countries service!' },
+        undefined
+      );
     });
 };
+
+module.exports = countries;

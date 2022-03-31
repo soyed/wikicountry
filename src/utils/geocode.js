@@ -29,7 +29,10 @@ const geocode = (address, callback) => {
       callback(undefined, { countryCode });
     })
     .catch((error) => {
-      callback({ ...error }, undefined);
+      callback(
+        { message: 'Unable to connect to location service!' },
+        undefined
+      );
     });
 };
 

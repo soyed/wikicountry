@@ -15,7 +15,6 @@ geocode('boston', (err, { countryCode } = {}) => {
       console.log(err);
       return;
     }
-
     console.log(data);
   });
 });
