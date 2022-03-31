@@ -1,0 +1,25 @@
+{
+  "name": "wikicountry",
+  "version": "1.0.0",
+  "description": "A web application that fetches information on a queried city.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soyed/wikicountry.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soyed/wikicountry/issues"
+  },
+  "homepage": "https://github.com/soyed/wikicountry#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "node-fetch": "^2.6.7",
+    "nodemon": "^2.0.15"
+  }
+}
