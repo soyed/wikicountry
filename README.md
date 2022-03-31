@@ -51,7 +51,7 @@ A web application that fetches information on a queried city.
 
 - [Countries Cities API](https://rapidapi.com/natkapral/api/countries-cities/)
 - [Mapbox GeoLocation API](https://docs.mapbox.com/api/search/geocoding/)
-- []()
+- [Glove Favicon](https://www.favicon.cc/?action=icon&file_id=968987)
 - []()
   
 ## Author
