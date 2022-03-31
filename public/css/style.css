@@ -76,6 +76,144 @@ header nav ul li a:active {
   flex-grow: 1;
 }
 
+.error-container,
+.country-content {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.country-content {
+  margin: 0 5rem;
+  flex-direction: column;
+  width: 100%;
+}
+
+.country-content h2 {
+  margin-bottom: 4rem;
+  font-size: 1.75rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.country--inputs {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.country--inputs div:first-child {
+  display: flex;
+  width: inherit;
+}
+
+.country--inputs div input {
+  width: 40%;
+  margin-right: 2rem;
+  padding: 1rem 0.5rem;
+  font-size: 1.6rem;
+  border: 0.1rem solid darkgoldenrod;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.search-box button {
+  padding: 1.5rem 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: darkgoldenrod;
+  cursor: pointer;
+  color: white;
+  font-size: 1.6rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.search-box button:hover,
+.search-box button:active {
+  color: darkgoldenrod;
+  border: 0.1rem solid darkgoldenrod;
+  background-color: transparent;
+}
+
+.country--details {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+}
+
+.card {
+  height: 45rem;
+  width: 40rem;
+  border-radius: 1rem;
+  background-color: antiquewhite;
+}
+
+.card--header,
+.card--content {
+  width: 100%;
+}
+
+.card--header {
+  height: 40%;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.card--header img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.card--content {
+  height: 60%;
+  padding: 2rem;
+}
+
+.card--content > div {
+  display: flex;
+  align-items: center;
+  height: 20%;
+  font-size: 1.6rem;
+}
+
+.card--content > div p {
+  font-size: 1.4rem;
+}
+.card--content > div p span {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.card--content div:last-child {
+  justify-content: center;
+}
+
+.card--content div:last-child a {
+  background-color: white;
+  padding: 0.8rem 3rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid darkgoldenrod;
+  text-transform: uppercase;
+  color: darkgoldenrod;
+  letter-spacing: 0.2rem;
+  font-size: 1.3rem;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.card--content div:last-child a:hover,
+.card--content div:last-child a:active {
+  background-color: darkgoldenrod;
+  border: none;
+  color: white;
+}
+
 .error-container {
   display: flex;
   justify-content: center;
@@ -124,5 +262,27 @@ footer p {
     padding: initial;
     padding: 5rem 0;
     width: 70%;
+  }
+
+  .country-content {
+    margin: 0 1.5rem;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .country--inputs div:first-child {
+    flex-direction: column;
+    align-items: center;
+  }
+  .country--inputs div input {
+    width: 95%;
+    margin-right: initial;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .search-box button {
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
   }
 }
