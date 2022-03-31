@@ -21,15 +21,18 @@ app.use(express.static(publicDirectoryPath));
 
 /*======== Routes  =======*/
 app.get('', (req, res) => {
-  res.render('index', { title: 'WikiCountry' });
+  res.render('index', { title: 'Home', author: 'Samuel Oyediran' });
 });
 
 app.get('/about', (req, res) => {
-  res.end('About page');
+  res.render('about', { title: 'About', author: 'Samuel Oyediran' });
 });
 
 app.get('/documentation', (req, res) => {
-  res.end('documentation page');
+  res.render('documentation', {
+    title: 'Documentation',
+    author: 'Samuel Oyediran',
+  });
 });
 
 app.get('/country', (req, res) => {
@@ -37,7 +40,11 @@ app.get('/country', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.end('404 page!');
+  res.render('404', {
+    title: '404',
+    errorMessage: 'Error! Resource not found.',
+    author: 'Samuel Oyediran',
+  });
 });
 
 /*======== Setting up App =======*/

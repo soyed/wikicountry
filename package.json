@@ -4,7 +4,7 @@
   "description": "A web application that fetches information on a queried city.",
   "main": "index.js",
   "scripts": {
-    "start-dev": "nodemon src/app.js -e js"
+    "start-dev": "nodemon src/app.js -e js,hbs,css"
   },
   "repository": {
     "type": "git",

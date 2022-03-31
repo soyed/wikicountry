@@ -9,3 +9,120 @@
 :root {
   font-size: 62.5%;
 }
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem;
+}
+
+header h1 {
+  margin-bottom: 3rem;
+  font-size: 4rem;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  background-color: darkgoldenrod;
+}
+
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  margin-right: 1.5rem;
+}
+header nav ul li a {
+  padding: 1rem 1.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1.7rem;
+  transition: all 0.5s ease-in-out;
+}
+
+header nav ul li a:hover,
+header nav ul li a:active {
+  background-color: white;
+  color: darkgoldenrod;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  flex: 1 0 auto;
+  align-items: center;
+}
+.error-container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darkgoldenrod;
+  color: white;
+  padding: 5rem 10rem;
+}
+.error-container div p {
+  font-size: 1.7rem;
+}
+
+footer {
+  display: flex;
+  padding: 5rem 2rem;
+  background-color: darkgoldenrod;
+  margin: 0 5rem;
+}
+
+footer p {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: 0 1.5rem;
+  }
+
+  header nav ul li {
+    margin-right: 1rem;
+  }
+
+  footer {
+    margin: 0 1.5rem;
+  }
+
+  .error-container div {
+    padding: initial;
+    padding: 5rem 0;
+    width: 70%;
+  }
+}
