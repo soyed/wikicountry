@@ -1,7 +1,8 @@
 const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
-
+const geocode = require('./utils/geocode');
+const countries = require('./utils/countries');
 /*====== Instantiate express app =========*/
 const app = express();
 // Create port
@@ -35,14 +36,41 @@ app.get('/documentation', (req, res) => {
   });
 });
 
+app.get('/documentation/*', (req, res) => {
+  res.render('404', {
+    title: '404 - Documentation',
+    author: 'Samuel Oyediran',
+    errorMessage: 'Error! Resource not found.',
+  });
+});
+
 app.get('/country', (req, res) => {
-  res.end('Fetching country details!!');
+  const { location } = req.query;
+  if (!location) {
+    return res.send({
+      message: 'Provide location to query country information.',
+    });
+  }
+
+  geocode(location, (error, { countryCode } = {}) => {
+    if (error) {
+      return res.send(error);
+    }
+
+    countries(countryCode, (error, data) => {
+      if (error) {
+        return res.send(error);
+      }
+
+      res.send(data);
+    });
+  });
 });
 
 app.get('*', (req, res) => {
   res.render('404', {
     title: '404',
-    errorMessage: 'Error! Resource not found.',
+    errorMessage: 'Page not found!',
     author: 'Samuel Oyediran',
   });
 });

@@ -11,6 +11,13 @@ const geocode = (address, callback) => {
     .then((res) => res.json())
     .then((data) => {
       const features = data.features[0];
+      // Edge case => when the request location is not found
+      if (!features) {
+        return callback(
+          { message: 'Unable to find location. Try another location!' },
+          undefined
+        );
+      }
 
       let countryCode;
       //   Edge case => if address is a country

@@ -29,6 +29,10 @@ const countries = (countryCode, callback) => {
   })
     .then((res) => res.json())
     .then((data) => {
+      // Edge case => if invalid country code is provided
+      if (data.error) {
+        return callback({ message: data.error.message }, undefined);
+      }
       let res = {};
       for (let key in data) {
         // edge case => only return the properties required
