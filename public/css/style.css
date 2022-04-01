@@ -144,6 +144,26 @@ header nav ul li a:active {
   margin: 10rem 0;
 }
 
+.card--loading {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 0.5rem solid antiquewhite;
+  border-top: solid 0.5rem darkgoldenrod;
+  animation: spinner 2s ease-in-out infinite;
+  display: none;
+}
+
+.card--loading.active {
+  display: initial;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .card {
   height: 45rem;
   width: 40rem;

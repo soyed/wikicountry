@@ -53,14 +53,10 @@ app.get('/country', (req, res) => {
   }
 
   geocode(location, (error, { countryCode } = {}) => {
-    if (error) {
-      return res.send(error);
-    }
+    if (error) return res.send(error);
 
     countries(countryCode, (error, data) => {
-      if (error) {
-        return res.send(error);
-      }
+      if (error) return res.send(error);
 
       res.send(data);
     });
