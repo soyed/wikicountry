@@ -10,7 +10,14 @@
   <body>
     <main>
       {{>header}}
-      <section class="main-content"></section>
+      <section class="main-content">
+        <div class="about-content">
+          <h2>WikiCountry Design Process</h2>
+          <h3>Information</h3>
+          <p>WikiCountry is an application that takes a location and displays the country information for that location queried. The location provided can be a country or a city.</p>
+          <p>The location provided uses <a href="https://docs.mapbox.com/api/search/geocoding/" target="_blank">Mapbox Geolocation API</a> to get the country code for the location. Finally, the geocode fetched is used to extract the country's details using <a href="https://rapidapi.com/natkapral/api/countries-cities/" target="_blank">Countries cities API</a></p>
+          <a href="https://github.com/soyed/wikicountry#readme" target="_blank">See more info</a>
+      </section>
       {{>footer}}
     </main>
   </body>
