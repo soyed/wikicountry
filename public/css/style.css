@@ -102,12 +102,12 @@ header nav ul li a:active {
   margin-bottom: 3rem;
 }
 
-.country--inputs div:first-child {
+.country--inputs form {
   display: flex;
   width: inherit;
 }
 
-.country--inputs div input {
+.country--inputs form input {
   width: 40%;
   margin-right: 2rem;
   padding: 1rem 0.5rem;
@@ -141,7 +141,7 @@ header nav ul li a:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5rem 0;
+  margin: 10rem 0;
 }
 
 .card {
