@@ -4,6 +4,7 @@ dotenv.config();
 const geocode = require('./src/utils/geocode');
 const countries = require('./src/utils/countries');
 
+// Testing APIs
 geocode('boston', (err, { countryCode } = {}) => {
   if (err) {
     console.log(err);

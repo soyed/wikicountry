@@ -44,6 +44,7 @@ app.get('/documentation/*', (req, res) => {
   });
 });
 
+// API route
 app.get('/country', (req, res) => {
   const { location } = req.query;
   if (!location) {
