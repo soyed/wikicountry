@@ -77,24 +77,17 @@ header nav ul li a:active {
 }
 
 .error-container,
+.country-content {
+  flex: 1 0 auto;
+}
+
 .country-content,
 .about-content,
 .documentation-content {
   display: flex;
-}
-
-.country-content,
-.about-content,
-.documentation-content {
   margin: 0 5rem;
   flex-direction: column;
 }
-
-/* .country-content > *,
-.about-content > *,
-.documentation-content > * {
-  width: 100%;
-} */
 
 .country-content h2 {
   margin-bottom: 4rem;
