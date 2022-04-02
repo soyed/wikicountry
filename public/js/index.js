@@ -16,12 +16,16 @@ countryForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const location = searchField.value;
 
-  loadingSpinner.classList.add('active');
+  const spinner = `
+    <div class="card--loading">
+      <div class="spinner"></div>
+    </div>
+  `;
+
+  // Apply loading state
+  countryContainer.innerHTML = spinner;
 
   countryDetails(location, (data) => {
-    // Apply loading state
-    loadingSpinner.classList.remove('active');
-
     // edge case => when there is an error => render error
     if (data.message) {
       const { message } = data;

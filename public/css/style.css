@@ -77,16 +77,24 @@ header nav ul li a:active {
 }
 
 .error-container,
-.country-content {
+.country-content,
+.about-content,
+.documentation-content {
   display: flex;
-  flex: 1 0 auto;
 }
 
-.country-content {
+.country-content,
+.about-content,
+.documentation-content {
   margin: 0 5rem;
   flex-direction: column;
-  width: 100%;
 }
+
+/* .country-content > *,
+.about-content > *,
+.documentation-content > * {
+  width: 100%;
+} */
 
 .country-content h2 {
   margin-bottom: 4rem;
@@ -151,11 +159,6 @@ header nav ul li a:active {
   border: 0.5rem solid antiquewhite;
   border-top: solid 0.5rem darkgoldenrod;
   animation: spinner 2s ease-in-out infinite;
-  display: none;
-}
-
-.card--loading.active {
-  display: initial;
 }
 
 @keyframes spinner {
@@ -252,6 +255,74 @@ header nav ul li a:active {
   font-size: 1.7rem;
 }
 
+.about-content h2,
+.documentation-content h2 {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.about-content h3 {
+  margin: 2rem 0;
+  font-size: 1.75rem;
+  letter-spacing: 0.1rem;
+}
+
+.summary,
+.details {
+  line-height: 2;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.details a {
+  color: red;
+  text-decoration: underline;
+  font-weight: 600;
+  margin: 0 0.2rem;
+}
+
+.github--container {
+  margin: 3rem 0;
+}
+.documentation-content p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin: 3.5rem 0;
+}
+
+.documentation-content div {
+  display: flex;
+  align-items: center;
+}
+
+.documentation-content div a,
+.github--container a {
+  padding: 1rem 1.5rem;
+  margin-right: 1.5rem;
+  border: 0.2rem solid darkgoldenrod;
+  transition: all 0.5s ease-in-out;
+  border-radius: 0.5rem;
+  color: black;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+
+.github--container a {
+  margin-right: initial;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+}
+
+.documentation-content div a:hover,
+.documentation-content div a:active,
+.github--container a:hover,
+.github--container a:active {
+  border: none;
+  background-color: darkgoldenrod;
+  color: white;
+}
+
 footer {
   display: flex;
   padding: 5rem 2rem;
@@ -263,6 +334,23 @@ footer p {
   font-size: 1.7rem;
   line-height: 1.2;
   color: white;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    padding: 0 3rem;
+  }
+  .country-content,
+  .about-content,
+  .documentation-content {
+    margin: 0 3rem;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  footer {
+    margin: 0 3rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -284,17 +372,19 @@ footer p {
     width: 70%;
   }
 
-  .country-content {
+  .country-content,
+  .about-content,
+  .documentation-content {
     margin: 0 1.5rem;
     flex-direction: column;
     width: 90%;
   }
 
-  .country--inputs div:first-child {
+  .country--inputs form {
     flex-direction: column;
     align-items: center;
   }
-  .country--inputs div input {
+  .country--inputs form input {
     width: 95%;
     margin-right: initial;
     margin-bottom: 2rem;
